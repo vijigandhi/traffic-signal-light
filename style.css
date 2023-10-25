@@ -1,0 +1,47 @@
+
+body
+{
+    width: 100%;
+    overflow: hidden;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+.innercontainer
+{
+    width: 200px;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+ 
+}
+
+#circle-1,
+#circle-2,
+#circle-3
+{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(107, 107, 107);
+    border-radius: 50%;
+}
+
+#timer
+{
+    width: 40%;
+    height: 12%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(107, 107, 107);
+}
