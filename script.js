@@ -1,38 +1,52 @@
 "use strict"
+
 let redcircle=document.getElementById("circle-1")
 let yellowcircle=document.getElementById("circle-2")
 let greencircle=document.getElementById("circle-3")
 let timerclk=document.getElementById("timer")
 
-let timer=0;
+let timer=0
+let color1=10
+let color2=5
+let color3=10
+
 function timeRun()
 {
-    timer+=1
-    if(timer<=20)
+    if(timer<11)
     {
-        timerclk.innerText=timer
-    }
-    else
-    {
-        timer=0;
-        timerclk.innerText=timer
+        redcircle.style.backgroundColor="red"
+        yellowcircle.style.backgroundColor=""
+        greencircle.style.backgroundColor=""
+        timerclk.innerText=color1
+        color1--
     }
 
-    if(timer==1)
+    else if(timer>11 && timer<=17)
     {
-        redcircle.style.backgroundColor='red'
-        greencircle.style.backgroundColor=''
+        redcircle.style.backgroundColor=""
+        yellowcircle.style.backgroundColor="yellow"
+        greencircle.style.backgroundColor=""
+        timerclk.innerText=color2
+        color2--
     }
-    else if(timer==8)
+
+    else if(timer>17 && timer<=28)
     {
-        yellowcircle.style.backgroundColor='yellow'
-        redcircle.style.backgroundColor=''
+        redcircle.style.backgroundColor=""
+        yellowcircle.style.backgroundColor=""
+        greencircle.style.backgroundColor="green"
+        timerclk.innerText=color3
+        color3--
     }
-    else if(timer==16)
+
+    if(timer==28)
     {
-        greencircle.style.backgroundColor='green'
-        yellowcircle.style.backgroundColor=''
+        timer=0;
+        color1=10;
+        color2=5;
+        color3=10;
     }
+    timer++
 }
 setInterval(timeRun,1000)
 
