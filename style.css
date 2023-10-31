@@ -25,7 +25,17 @@ body
  
 }
 
-#circle-1,
+.c1,
+.c2,
+.c3
+{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(107, 107, 107);
+    border-radius: 50%;
+}
+
+/* #circle-1,
 #circle-2,
 #circle-3
 {
@@ -33,7 +43,7 @@ body
     height: 100px;
     background-color: rgb(107, 107, 107);
     border-radius: 50%;
-}
+} */
 
 #timer
 {
@@ -44,4 +54,21 @@ body
     align-items: center;
     justify-content: center;
     background-color: rgb(107, 107, 107);
+}
+
+
+
+.red
+{
+    background-color: red;
+}
+
+.yellow
+{
+    background-color:yellow;
+}
+
+.green
+{
+    background-color: green;
 }

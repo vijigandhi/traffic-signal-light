@@ -13,28 +13,41 @@ let color3=10
 function timeRun()
 {
     if(timer<11)
-    {
-        redcircle.style.backgroundColor="red"
-        yellowcircle.style.backgroundColor=""
-        greencircle.style.backgroundColor=""
+    {   
+
+        redcircle.classList.add('red');
+        greencircle.classList.remove("green")
+
+        // redcircle.style.backgroundColor="red"
+        // yellowcircle.style.backgroundColor=""
+        // greencircle.style.backgroundColor=""
+
         timerclk.innerText=color1
         color1--
     }
 
     else if(timer>11 && timer<=17)
     {
-        redcircle.style.backgroundColor=""
-        yellowcircle.style.backgroundColor="yellow"
-        greencircle.style.backgroundColor=""
+        redcircle.classList.remove('red');
+        yellowcircle.classList.add('yellow');
+
+        // redcircle.style.backgroundColor=""
+        // yellowcircle.style.backgroundColor="yellow"
+        // greencircle.style.backgroundColor=""
+
         timerclk.innerText=color2
         color2--
     }
 
     else if(timer>17 && timer<=28)
     {
-        redcircle.style.backgroundColor=""
-        yellowcircle.style.backgroundColor=""
-        greencircle.style.backgroundColor="green"
+        yellowcircle.classList.remove('yellow');
+        greencircle.classList.add('green');
+
+        // redcircle.style.backgroundColor=""
+        // yellowcircle.style.backgroundColor=""
+        // greencircle.style.backgroundColor="green"
+        
         timerclk.innerText=color3
         color3--
     }
@@ -48,7 +61,7 @@ function timeRun()
     }
     timer++
 }
-setInterval(timeRun,1000)
+setInterval(timeRun,700)
 
 //----------------------mouseover--------------------------
 
